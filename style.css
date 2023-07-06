@@ -1,0 +1,805 @@
+
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(4, 4, 6, 0.533);
+}
+
+header{
+  color: #f5f5f5;
+  background: #000000c7;
+  display: flex;
+  position: relative;
+  top: -40px;
+  height: 100px;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  z-index: 81;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+footer{
+  color: #f5f5f5;
+  background: #000000c7;
+  display: flex;
+  position: relative;
+  bottom: -15px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  z-index: 81;
+  margin-top: 20px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes labels {
+  from {
+    z-index: 7;
+  }
+  to {
+    z-index: 1;
+  }
+}
+
+
+
+.label:nth-of-type(1) {
+  animation-delay: 0s;
+}
+.label:nth-of-type(2) {
+  animation-delay: -0.5s;
+  
+}
+.label:nth-of-type(3) {
+  animation-delay: -1s;
+}
+.label:nth-of-type(4) {
+  animation-delay: -1.5s;
+  
+}
+.label:nth-of-type(5) {
+  animation-delay: -2s;
+  
+}
+.label:nth-of-type(6) {
+  animation-delay: -2.5s;
+ 
+} 
+.label:nth-of-type(7) {
+  animation-delay: -3s;
+} 
+
+
+
+#posicion1:checked ~ .Cards label:nth-of-type(12) {order: 4;}
+#posicion1:checked ~ .Cards label:nth-of-type(2) {order: 14;}
+#posicion1:checked ~ .Cards label:nth-of-type(8) {order: 1;}
+#posicion1:checked ~ .Cards label:nth-of-type(15) {order: 6;}
+#posicion1:checked ~ .Cards label:nth-of-type(10) {order: 9;}
+#posicion1:checked ~ .Cards label:nth-of-type(6) {order: 2;}
+#posicion1:checked ~ .Cards label:nth-of-type(14) {order: 11;}
+#posicion1:checked ~ .Cards label:nth-of-type(3) {order: 5;}
+#posicion1:checked ~ .Cards label:nth-of-type(11) {order: 8;}
+#posicion1:checked ~ .Cards label:nth-of-type(9) {order: 12;}
+#posicion1:checked ~ .Cards label:nth-of-type(16) {order: 15;}
+#posicion1:checked ~ .Cards label:nth-of-type(13) {order: 10;}
+#posicion1:checked ~ .Cards label:nth-of-type(7) {order: 16;}
+#posicion1:checked ~ .Cards label:nth-of-type(4) {order: 3;}
+#posicion1:checked ~ .Cards label:nth-of-type(5) {order: 7;}
+#posicion1:checked ~ .Cards label:nth-of-type(1) {order: 13;}
+
+
+#posicion2:checked ~ .Cards label:nth-of-type(8) {order: 4;}
+#posicion2:checked ~ .Cards label:nth-of-type(11) {order: 9;}
+#posicion2:checked ~ .Cards label:nth-of-type(10) {order: 3;}
+#posicion2:checked ~ .Cards label:nth-of-type(14) {order: 5;}
+#posicion2:checked ~ .Cards label:nth-of-type(6) {order: 14;}
+#posicion2:checked ~ .Cards label:nth-of-type(12) {order: 8;}
+#posicion2:checked ~ .Cards label:nth-of-type(4) {order: 11;}
+#posicion2:checked ~ .Cards label:nth-of-type(3) {order: 15;}
+#posicion2:checked ~ .Cards label:nth-of-type(5) {order: 2;}
+#posicion2:checked ~ .Cards label:nth-of-type(1) {order: 1;}
+#posicion2:checked ~ .Cards label:nth-of-type(7) {order: 12;}
+#posicion2:checked ~ .Cards label:nth-of-type(2) {order: 6;}
+#posicion2:checked ~ .Cards label:nth-of-type(15) {order: 10;}
+#posicion2:checked ~ .Cards label:nth-of-type(9) {order: 13;}
+#posicion2:checked ~ .Cards label:nth-of-type(16) {order: 16;}
+#posicion2:checked ~ .Cards label:nth-of-type(13) {order: 7;}
+
+
+#posicion3:checked ~ .Cards label:nth-of-type(7) {order: 4;}
+#posicion3:checked ~ .Cards label:nth-of-type(2) {order: 12;}
+#posicion3:checked ~ .Cards label:nth-of-type(9) {order: 6;}
+#posicion3:checked ~ .Cards label:nth-of-type(4) {order: 9;}
+#posicion3:checked ~ .Cards label:nth-of-type(5) {order: 14;}
+#posicion3:checked ~ .Cards label:nth-of-type(3) {order: 15;}
+#posicion3:checked ~ .Cards label:nth-of-type(1) {order: 1;}
+#posicion3:checked ~ .Cards label:nth-of-type(11) {order: 11;}
+#posicion3:checked ~ .Cards label:nth-of-type(10) {order: 2;}
+#posicion3:checked ~ .Cards label:nth-of-type(13) {order: 8;}
+#posicion3:checked ~ .Cards label:nth-of-type(12) {order: 5;}
+#posicion3:checked ~ .Cards label:nth-of-type(6) {order: 3;}
+#posicion3:checked ~ .Cards label:nth-of-type(15) {order: 7;}
+#posicion3:checked ~ .Cards label:nth-of-type(16) {order: 13;}
+#posicion3:checked ~ .Cards label:nth-of-type(14) {order: 16;}
+
+
+#posicion4:checked ~ .Cards label:nth-of-type(2) {order: 7;}
+#posicion4:checked ~ .Cards label:nth-of-type(14) {order: 6;}
+#posicion4:checked ~ .Cards label:nth-of-type(12) {order: 1;}
+#posicion4:checked ~ .Cards label:nth-of-type(5) {order: 10;}
+#posicion4:checked ~ .Cards label:nth-of-type(11) {order: 4;}
+#posicion4:checked ~ .Cards label:nth-of-type(3) {order: 11;}
+#posicion4:checked ~ .Cards label:nth-of-type(6) {order: 15;}
+#posicion4:checked ~ .Cards label:nth-of-type(1) {order: 12;}
+#posicion4:checked ~ .Cards label:nth-of-type(16) {order: 5;}
+#posicion4:checked ~ .Cards label:nth-of-type(10) {order: 9;}
+#posicion4:checked ~ .Cards label:nth-of-type(4) {order: 2;}
+#posicion4:checked ~ .Cards label:nth-of-type(7) {order: 13;}
+#posicion4:checked ~ .Cards label:nth-of-type(9) {order: 16;}
+#posicion4:checked ~ .Cards label:nth-of-type(8) {order: 14;}
+#posicion4:checked ~ .Cards label:nth-of-type(13) {order: 3;}
+#posicion4:checked ~ .Cards label:nth-of-type(15) {order: 8;}
+
+
+#posicion5:checked ~ .Cards label:nth-of-type(4) {order: 4;}
+#posicion5:checked ~ .Cards label:nth-of-type(9) {order: 10;}
+#posicion5:checked ~ .Cards label:nth-of-type(12) {order: 6;}
+#posicion5:checked ~ .Cards label:nth-of-type(5) {order: 1;}
+#posicion5:checked ~ .Cards label:nth-of-type(6) {order: 13;}
+#posicion5:checked ~ .Cards label:nth-of-type(3) {order: 2;}
+#posicion5:checked ~ .Cards label:nth-of-type(8) {order: 7;}
+#posicion5:checked ~ .Cards label:nth-of-type(11) {order: 11;}
+#posicion5:checked ~ .Cards label:nth-of-type(14) {order: 9;}
+#posicion5:checked ~ .Cards label:nth-of-type(2) {order: 15;}
+#posicion5:checked ~ .Cards label:nth-of-type(7) {order: 3;}
+#posicion5:checked ~ .Cards label:nth-of-type(13) {order: 8;}
+#posicion5:checked ~ .Cards label:nth-of-type(10) {order: 14;}
+#posicion5:checked ~ .Cards label:nth-of-type(1) {order: 12;}
+#posicion5:checked ~ .Cards label:nth-of-type(15) {order: 16;}
+#posicion5:checked ~ .Cards label:nth-of-type(16) {order: 5;}
+
+
+#posicion6:checked ~ .Cards label:nth-of-type(7) {order: 4;}
+#posicion6:checked ~ .Cards label:nth-of-type(5) {order: 10;}
+#posicion6:checked ~ .Cards label:nth-of-type(14) {order: 7;}
+#posicion6:checked ~ .Cards label:nth-of-type(11) {order: 2;}
+#posicion6:checked ~ .Cards label:nth-of-type(10) {order: 13;}
+#posicion6:checked ~ .Cards label:nth-of-type(13) {order: 6;}
+#posicion6:checked ~ .Cards label:nth-of-type(2) {order: 9;}
+#posicion6:checked ~ .Cards label:nth-of-type(3) {order: 16;}
+#posicion6:checked ~ .Cards label:nth-of-type(6) {order: 12;}
+#posicion6:checked ~ .Cards label:nth-of-type(8) {order: 15;}
+#posicion6:checked ~ .Cards label:nth-of-type(1) {order: 1;}
+#posicion6:checked ~ .Cards label:nth-of-type(12) {order: 5;}
+#posicion6:checked ~ .Cards label:nth-of-type(15) {order: 3;}
+#posicion6:checked ~ .Cards label:nth-of-type(16) {order: 11;}
+#posicion6:checked ~ .Cards label:nth-of-type(4) {order: 8;}
+#posicion6:checked ~ .Cards label:nth-of-type(9) {order: 14;}
+
+
+#posicion7:checked ~ .Cards label:nth-of-type(1) {order: 16;}
+#posicion7:checked ~ .Cards label:nth-of-type(5) {order: 10;}
+#posicion7:checked ~ .Cards label:nth-of-type(7) {order: 12;}
+#posicion7:checked ~ .Cards label:nth-of-type(9) {order: 11;}
+#posicion7:checked ~ .Cards label:nth-of-type(10) {order: 14;}
+#posicion7:checked ~ .Cards label:nth-of-type(16) {order: 13;}
+#posicion7:checked ~ .Cards label:nth-of-type(12) {order: 15;}
+#posicion7:checked ~ .Cards label:nth-of-type(13) {order: 4;}
+#posicion7:checked ~ .Cards label:nth-of-type(11) {order: 9;}
+#posicion7:checked ~ .Cards label:nth-of-type(14) {order: 7;}
+#posicion7:checked ~ .Cards label:nth-of-type(6) {order: 6;}
+#posicion7:checked ~ .Cards label:nth-of-type(2) {order: 2;}
+#posicion7:checked ~ .Cards label:nth-of-type(3) {order: 8;}
+#posicion7:checked ~ .Cards label:nth-of-type(4) {order: 5;}
+#posicion7:checked ~ .Cards label:nth-of-type(8) {order: 3;}
+#posicion7:checked ~ .Cards label:nth-of-type(15) {order: 1;}
+
+#posicion8:checked ~ .Cards label:nth-of-type(4) {order: 16;}
+#posicion8:checked ~ .Cards label:nth-of-type(5) {order: 10;}
+#posicion8:checked ~ .Cards label:nth-of-type(7) {order: 12;}
+#posicion8:checked ~ .Cards label:nth-of-type(2) {order: 11;}
+#posicion8:checked ~ .Cards label:nth-of-type(11) {order: 14;}
+#posicion8:checked ~ .Cards label:nth-of-type(13) {order: 13;}
+#posicion8:checked ~ .Cards label:nth-of-type(12) {order: 15;}
+#posicion8:checked ~ .Cards label:nth-of-type(10) {order: 4;}
+#posicion8:checked ~ .Cards label:nth-of-type(12) {order: 9;}
+#posicion8:checked ~ .Cards label:nth-of-type(14) {order: 7;}
+#posicion8:checked ~ .Cards label:nth-of-type(6) {order: 6;}
+#posicion8:checked ~ .Cards label:nth-of-type(1) {order: 2;}
+#posicion8:checked ~ .Cards label:nth-of-type(8) {order: 8;}
+#posicion8:checked ~ .Cards label:nth-of-type(9) {order: 5;}
+#posicion8:checked ~ .Cards label:nth-of-type(3) {order: 3;}
+#posicion8:checked ~ .Cards label:nth-of-type(15) {order: 1;}
+
+#posicion1:checked ~ .aletoriedad,
+#posicion2:checked ~ .aletoriedad,
+#posicion3:checked ~ .aletoriedad,
+#posicion4:checked ~ .aletoriedad,
+#posicion5:checked ~ .aletoriedad,
+#posicion6:checked ~ .aletoriedad,
+#posicion7:checked ~ .aletoriedad {
+  display: none;
+}
+
+
+.aletoriedad{
+  background-color: #ffffffb3;
+  width: 100%;
+  height: 100%;
+    z-index: 80;
+    position: absolute;
+}
+.label {
+  color: #fff;
+  animation: labels 6s infinite linear;
+  background: #000000;
+  cursor: pointer;
+  display: block;
+  padding: 1rem;
+  user-select: none;
+  position: absolute;
+  /* center it self*/
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+
+}
+@keyframes rotacion {
+  0%{
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+
+.Cards {
+  max-width: min-content;
+  display: grid;
+  padding: 0;
+  margin: 0;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.Cards .FlipCard{ 
+  position: relative;
+  color: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+}
+
+.Cards .FlipCard .Card{
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+ .FlipCard .ElementFront,
+ .FlipCard .ElementBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.FlipCard .ElementFront img,
+.FlipCard .ElementBack img {
+
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+
+input[type="checkbox"],
+input[type="radio"]
+ {
+  display: none;
+
+} 
+
+
+ .FlipCard .ElementBack {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.Imagenes{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  
+}
+#caja1:checked ~  .Cards  .Label1 .Card ,
+#caja2:checked ~  .Cards .Label2 .Card ,
+#caja3:checked ~  .Cards .Label3 .Card ,
+#caja4:checked ~  .Cards .Label4 .Card ,
+#caja5:checked ~  .Cards .Label5 .Card ,
+#caja6:checked ~  .Cards .Label6 .Card ,
+#caja7:checked ~  .Cards .Label7 .Card ,
+#caja8:checked ~  .Cards .Label8 .Card ,
+#caja9:checked ~  .Cards .Label9 .Card ,
+#caja10:checked ~  .Cards .Label10 .Card ,
+#caja11:checked ~  .Cards .Label11 .Card ,
+#caja12:checked ~  .Cards .Label12 .Card ,
+#caja13:checked ~  .Cards .Label13 .Card ,
+#caja14:checked ~  .Cards .Label14 .Card ,
+#caja15:checked ~  .Cards .Label15 .Card ,
+#caja16:checked ~  .Cards .Label16 .Card  {
+  transform: rotateY(180deg);
+
+}
+
+
+
+
+ #caja1:checked + #caja2:checked ~ .Cards .Label1 , 
+#caja1:checked + #caja2:checked ~ .Cards .Label2 ,
+#caja3:checked + #caja4:checked ~ .Cards .Label3 ,
+#caja3:checked + #caja4:checked ~ .Cards .Label4 ,
+#caja5:checked + #caja6:checked ~ .Cards .Label5 ,
+#caja5:checked + #caja6:checked ~ .Cards .Label6 ,
+#caja7:checked + #caja8:checked ~ .Cards .Label7 ,
+#caja7:checked + #caja8:checked ~ .Cards .Label8 ,
+#caja9:checked + #caja10:checked ~ .Cards .Label9 , 
+#caja9:checked + #caja10:checked ~ .Cards .Label10  ,
+#caja11:checked + #caja12:checked ~ .Cards .Label11  ,
+#caja11:checked + #caja12:checked ~ .Cards .Label12  ,
+#caja13:checked + #caja14:checked ~ .Cards .Label13  ,
+#caja13:checked + #caja14:checked ~ .Cards .Label14  ,
+#caja15:checked + #caja16:checked ~ .Cards .Label15  ,
+#caja15:checked + #caja16:checked ~ .Cards .Label16  
+{
+  pointer-events: none;
+}
+
+#caja1:checked ~ #caja2:not(:checked) ~ #caja3:checked ~ #caja4:not(:checked) ~ .Cards label:not(.Label1):not(.Label3),
+#caja1:checked ~ #caja2:not(:checked) ~ #caja3:not(:checked) ~ #caja4:checked ~ .Cards label:not(.Label1):not(.Label4),
+#caja1:checked ~ #caja2:not(:checked) ~ #caja5:checked ~ #caja6:not(:checked) ~ .Cards label:not(.Label1):not(.Label5),
+#caja1:checked ~ #caja2:not(:checked) ~ #caja5:not(:checked) ~ #caja6:checked ~ .Cards label:not(.Label1):not(.Label6),
+#caja1:checked ~ #caja2:not(:checked) ~ #caja7:checked ~ #caja8:not(:checked) ~ .Cards label:not(.Label1):not(.Label7),
+#caja1:checked ~ #caja2:not(:checked) ~ #caja7:not(:checked) ~ #caja8:checked ~ .Cards label:not(.Label1):not(.Label8),
+#caja1:checked ~ #caja2:not(:checked) ~ #caja9:checked ~ #caja10:not(:checked) ~ .Cards label:not(.Label1):not(.Label9),
+#caja1:checked ~ #caja2:not(:checked) ~ #caja9:not(:checked) ~ #caja10:checked ~ .Cards label:not(.Label1):not(.Label10),
+#caja1:checked ~ #caja2:not(:checked) ~ #caja11:checked ~ #caja12:not(:checked) ~ .Cards label:not(.Label1):not(.Label11),
+#caja1:checked ~ #caja2:not(:checked) ~ #caja11:not(:checked) ~ #caja12:checked ~ .Cards label:not(.Label1):not(.Label12),
+#caja1:checked ~ #caja2:not(:checked) ~ #caja13:checked ~ #caja14:not(:checked) ~ .Cards label:not(.Label1):not(.Label13),
+#caja1:checked ~ #caja2:not(:checked) ~ #caja13:not(:checked) ~ #caja14:checked ~ .Cards label:not(.Label1):not(.Label14),
+#caja1:checked ~ #caja2:not(:checked) ~ #caja15:checked ~ #caja16:not(:checked) ~ .Cards label:not(.Label1):not(.Label15),
+#caja1:checked ~ #caja2:not(:checked) ~ #caja15:not(:checked) ~ #caja16:checked ~ .Cards label:not(.Label1):not(.Label16),
+
+#caja1:not(:checked) ~ #caja2:checked  ~ #caja3:checked ~ #caja4:not(:checked) ~ .Cards label:not(.Label2):not(.Label3),
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja3:not(:checked) ~ #caja4:checked ~ .Cards label:not(.Label2):not(.Label4),
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja5:checked ~ #caja6:not(:checked) ~ .Cards label:not(.Label2):not(.Label5),
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja5:not(:checked) ~ #caja6:checked ~ .Cards label:not(.Label2):not(.Label6),
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja7:checked ~ #caja8:not(:checked) ~ .Cards label:not(.Label2):not(.Label7),
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja7:not(:checked) ~ #caja8:checked ~ .Cards label:not(.Label2):not(.Label8),
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja9:checked ~ #caja10:not(:checked) ~ .Cards label:not(.Label2):not(.Label9),
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja9:not(:checked) ~ #caja10:checked ~ .Cards label:not(.Label2):not(.Label10),
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja11:checked ~ #caja12:not(:checked) ~ .Cards label:not(.Label2):not(.Label11),
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja11:not(:checked) ~ #caja12:checked ~ .Cards label:not(.Label2):not(.Label12),
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja13:checked ~ #caja14:not(:checked) ~ .Cards label:not(.Label2):not(.Label13),
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja13:not(:checked) ~ #caja14:checked ~ .Cards label:not(.Label2):not(.Label14),
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja15:checked ~ #caja16:not(:checked) ~ .Cards label:not(.Label2):not(.Label15),
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja15:not(:checked) ~ #caja16:checked ~ .Cards label:not(.Label2):not(.Label16),
+
+#caja3:checked ~ #caja4:not(:checked) ~ #caja5:checked ~ #caja6:not(:checked) ~ .Cards label:not(.Label3):not(.Label5),
+#caja3:checked ~ #caja4:not(:checked) ~ #caja5:not(:checked) ~ #caja6:checked ~ .Cards label:not(.Label3):not(.Label6),
+#caja3:checked ~ #caja4:not(:checked) ~ #caja7:checked ~ #caja8:not(:checked) ~ .Cards label:not(.Label3):not(.Label7),
+#caja3:checked ~ #caja4:not(:checked) ~ #caja7:not(:checked) ~ #caja8:checked ~ .Cards label:not(.Label3):not(.Label8),
+#caja3:checked ~ #caja4:not(:checked) ~ #caja9:checked ~ #caja10:not(:checked) ~ .Cards label:not(.Label3):not(.Label9),
+#caja3:checked ~ #caja4:not(:checked) ~ #caja9:not(:checked) ~ #caja10:checked ~ .Cards label:not(.Label3):not(.Label10),
+#caja3:checked ~ #caja4:not(:checked) ~ #caja11:checked ~ #caja12:not(:checked) ~ .Cards label:not(.Label3):not(.Label11),
+#caja3:checked ~ #caja4:not(:checked) ~ #caja11:not(:checked) ~ #caja12:checked ~ .Cards label:not(.Label3):not(.Label12),
+#caja3:checked ~ #caja4:not(:checked) ~ #caja13:checked ~ #caja14:not(:checked) ~ .Cards label:not(.Label3):not(.Label13),
+#caja3:checked ~ #caja4:not(:checked) ~ #caja13:not(:checked) ~ #caja14:checked ~ .Cards label:not(.Label3):not(.Label14),
+#caja3:checked ~ #caja4:not(:checked) ~ #caja15:checked ~ #caja16:not(:checked) ~ .Cards label:not(.Label3):not(.Label15),
+#caja3:checked ~ #caja4:not(:checked) ~ #caja15:not(:checked) ~ #caja16:checked ~ .Cards label:not(.Label3):not(.Label16),
+
+#caja3:not(:checked) ~ #caja4:checked ~ #caja5:checked ~ #caja6:not(:checked) ~ .Cards label:not(.Label4):not(.Label5),
+#caja3:not(:checked) ~ #caja4:checked ~ #caja5:not(:checked) ~ #caja6:checked ~ .Cards label:not(.Label4):not(.Label6),
+#caja3:not(:checked) ~ #caja4:checked ~ #caja7:checked ~ #caja8:not(:checked) ~ .Cards label:not(.Label4):not(.Label7),
+#caja3:not(:checked) ~ #caja4:checked ~ #caja7:not(:checked) ~ #caja8:checked ~ .Cards label:not(.Label4):not(.Label8),
+#caja3:not(:checked) ~ #caja4:checked ~ #caja9:checked ~ #caja10:not(:checked) ~ .Cards label:not(.Label4):not(.Label9),
+#caja3:not(:checked) ~ #caja4:checked ~ #caja9:not(:checked) ~ #caja10:checked ~ .Cards label:not(.Label4):not(.Label10),
+#caja3:not(:checked) ~ #caja4:checked ~ #caja11:checked ~ #caja12:not(:checked) ~ .Cards label:not(.Label4):not(.Label11),
+#caja3:not(:checked) ~ #caja4:checked ~ #caja11:not(:checked) ~ #caja12:checked ~ .Cards label:not(.Label4):not(.Label12),
+#caja3:not(:checked) ~ #caja4:checked ~ #caja13:checked ~ #caja14:not(:checked) ~ .Cards label:not(.Label4):not(.Label13),
+#caja3:not(:checked) ~ #caja4:checked ~ #caja13:not(:checked) ~ #caja14:checked ~ .Cards label:not(.Label4):not(.Label14),
+#caja3:not(:checked) ~ #caja4:checked ~ #caja15:checked ~ #caja16:not(:checked) ~ .Cards label:not(.Label4):not(.Label15),
+#caja3:not(:checked) ~ #caja4:checked ~ #caja15:not(:checked) ~ #caja16:checked ~ .Cards label:not(.Label4):not(.Label16),
+
+#caja5:checked ~ #caja6:not(:checked) ~ #caja7:checked ~ #caja8:not(:checked) ~ .Cards label:not(.Label5):not(.Label7),
+#caja5:checked ~ #caja6:not(:checked) ~ #caja7:not(:checked) ~ #caja8:checked ~ .Cards label:not(.Label5):not(.Label8),
+#caja5:checked ~ #caja6:not(:checked) ~ #caja9:checked ~ #caja10:not(:checked) ~ .Cards label:not(.Label5):not(.Label9),
+#caja5:checked ~ #caja6:not(:checked) ~ #caja9:not(:checked) ~ #caja10:checked ~ .Cards label:not(.Label5):not(.Label10),
+#caja5:checked ~ #caja6:not(:checked) ~ #caja11:checked ~ #caja12:not(:checked) ~ .Cards label:not(.Label5):not(.Label11),
+#caja5:checked ~ #caja6:not(:checked) ~ #caja11:not(:checked) ~ #caja12:checked ~ .Cards label:not(.Label5):not(.Label12),
+#caja5:checked ~ #caja6:not(:checked) ~ #caja13:checked ~ #caja14:not(:checked) ~ .Cards label:not(.Label5):not(.Label13),
+#caja5:checked ~ #caja6:not(:checked) ~ #caja13:not(:checked) ~ #caja14:checked ~ .Cards label:not(.Label5):not(.Label14),
+#caja5:checked ~ #caja6:not(:checked) ~ #caja15:checked ~ #caja16:not(:checked) ~ .Cards label:not(.Label5):not(.Label15),
+#caja5:checked ~ #caja6:not(:checked) ~ #caja15:not(:checked) ~ #caja16:checked ~ .Cards label:not(.Label5):not(.Label16),
+
+#caja5:not(:checked) ~ #caja6:checked ~ #caja7:checked ~ #caja8:not(:checked) ~ .Cards label:not(.Label6):not(.Label7),
+#caja5:not(:checked) ~ #caja6:checked ~ #caja7:not(:checked) ~ #caja8:checked ~ .Cards label:not(.Label6):not(.Label8),
+#caja5:not(:checked) ~ #caja6:checked ~ #caja9:checked ~ #caja10:not(:checked) ~ .Cards label:not(.Label6):not(.Label9),
+#caja5:not(:checked) ~ #caja6:checked ~ #caja9:not(:checked) ~ #caja10:checked ~ .Cards label:not(.Label6):not(.Label10),
+#caja5:not(:checked) ~ #caja6:checked ~ #caja11:checked ~ #caja12:not(:checked) ~ .Cards label:not(.Label6):not(.Label11),
+#caja5:not(:checked) ~ #caja6:checked ~ #caja11:not(:checked) ~ #caja12:checked ~ .Cards label:not(.Label6):not(.Label12),
+#caja5:not(:checked) ~ #caja6:checked ~ #caja13:checked ~ #caja14:not(:checked) ~ .Cards label:not(.Label6):not(.Label13),
+#caja5:not(:checked) ~ #caja6:checked ~ #caja13:not(:checked) ~ #caja14:checked ~ .Cards label:not(.Label6):not(.Label14),
+#caja5:not(:checked) ~ #caja6:checked ~ #caja15:checked ~ #caja16:not(:checked) ~ .Cards label:not(.Label6):not(.Label15),
+#caja5:not(:checked) ~ #caja6:checked ~ #caja15:not(:checked) ~ #caja16:checked ~ .Cards label:not(.Label6):not(.Label16),
+
+#caja7:checked ~ #caja8:not(:checked) ~ #caja9:checked ~ #caja10:not(:checked) ~ .Cards label:not(.Label7):not(.Label9),
+#caja7:checked ~ #caja8:not(:checked) ~ #caja9:not(:checked) ~ #caja10:checked ~ .Cards label:not(.Label7):not(.Label10),
+#caja7:checked ~ #caja8:not(:checked) ~ #caja11:checked ~ #caja12:not(:checked) ~ .Cards label:not(.Label7):not(.Label11),
+#caja7:checked ~ #caja8:not(:checked) ~ #caja11:not(:checked) ~ #caja12:checked ~ .Cards label:not(.Label7):not(.Label12),
+#caja7:checked ~ #caja8:not(:checked) ~ #caja13:checked ~ #caja14:not(:checked) ~ .Cards label:not(.Label7):not(.Label13),
+#caja7:checked ~ #caja8:not(:checked) ~ #caja13:not(:checked) ~ #caja14:checked ~ .Cards label:not(.Label7):not(.Label14),
+#caja7:checked ~ #caja8:not(:checked) ~ #caja15:checked ~ #caja16:not(:checked) ~ .Cards label:not(.Label7):not(.Label15),
+#caja7:checked ~ #caja8:not(:checked) ~ #caja15:not(:checked) ~ #caja16:checked ~ .Cards label:not(.Label7):not(.Label16),
+
+#caja7:not(:checked) ~ #caja8:checked ~ #caja9:checked ~ #caja10:not(:checked) ~ .Cards label:not(.Label8):not(.Label9),
+#caja7:not(:checked) ~ #caja8:checked ~ #caja9:not(:checked) ~ #caja10:checked ~ .Cards label:not(.Label8):not(.Label10),
+#caja7:not(:checked) ~ #caja8:checked ~ #caja11:checked ~ #caja12:not(:checked) ~ .Cards label:not(.Label8):not(.Label11),
+#caja7:not(:checked) ~ #caja8:checked ~ #caja11:not(:checked) ~ #caja12:checked ~ .Cards label:not(.Label8):not(.Label12),
+#caja7:not(:checked) ~ #caja8:checked ~ #caja13:checked ~ #caja14:not(:checked) ~ .Cards label:not(.Label8):not(.Label13),
+#caja7:not(:checked) ~ #caja8:checked ~ #caja13:not(:checked) ~ #caja14:checked ~ .Cards label:not(.Label8):not(.Label14),
+#caja7:not(:checked) ~ #caja8:checked ~ #caja15:checked ~ #caja16:not(:checked) ~ .Cards label:not(.Label8):not(.Label15),
+#caja7:not(:checked) ~ #caja8:checked ~ #caja15:not(:checked) ~ #caja16:checked ~ .Cards label:not(.Label8):not(.Label16),
+
+#caja9:checked ~ #caja10:not(:checked) ~ #caja11:checked ~ #caja12:not(:checked) ~ .Cards label:not(.Label9):not(.Label11),
+#caja9:checked ~ #caja10:not(:checked) ~ #caja11:not(:checked) ~ #caja12:checked ~ .Cards label:not(.Label9):not(.Label12),
+#caja9:checked ~ #caja10:not(:checked) ~ #caja13:checked ~ #caja14:not(:checked) ~ .Cards label:not(.Label9):not(.Label13),
+#caja9:checked ~ #caja10:not(:checked) ~ #caja13:not(:checked) ~ #caja14:checked ~ .Cards label:not(.Label9):not(.Label14),
+#caja9:checked ~ #caja10:not(:checked) ~ #caja15:checked ~ #caja16:not(:checked) ~ .Cards label:not(.Label9):not(.Label15),
+#caja9:checked ~ #caja10:not(:checked) ~ #caja15:not(:checked) ~ #caja16:checked ~ .Cards label:not(.Label9):not(.Label16),
+
+#caja9:not(:checked) ~ #caja10:checked ~ #caja11:checked ~ #caja12:not(:checked) ~ .Cards label:not(.Label10):not(.Label11),
+#caja9:not(:checked) ~ #caja10:checked ~ #caja11:not(:checked) ~ #caja12:checked ~ .Cards label:not(.Label10):not(.Label12),
+#caja9:not(:checked) ~ #caja10:checked ~ #caja13:checked ~ #caja14:not(:checked) ~ .Cards label:not(.Label10):not(.Label13),
+#caja9:not(:checked) ~ #caja10:checked ~ #caja13:not(:checked) ~ #caja14:checked ~ .Cards label:not(.Label10):not(.Label14),
+#caja9:not(:checked) ~ #caja10:checked ~ #caja15:checked ~ #caja16:not(:checked) ~ .Cards label:not(.Label10):not(.Label15),
+#caja9:not(:checked) ~ #caja10:checked ~ #caja15:not(:checked) ~ #caja16:checked ~ .Cards label:not(.Label10):not(.Label16),
+
+#caja11:checked ~ #caja12:not(:checked) ~ #caja13:checked ~ #caja14:not(:checked) ~ .Cards label:not(.Label11):not(.Label13),
+#caja11:checked ~ #caja12:not(:checked) ~ #caja13:not(:checked) ~ #caja14:checked ~ .Cards label:not(.Label11):not(.Label14),
+#caja11:checked ~ #caja12:not(:checked) ~ #caja15:checked ~ #caja16:not(:checked) ~ .Cards label:not(.Label11):not(.Label15),
+#caja11:checked ~ #caja12:not(:checked) ~ #caja15:not(:checked) ~ #caja16:checked ~ .Cards label:not(.Label11):not(.Label16),
+
+#caja11:not(:checked) ~ #caja12:checked ~ #caja13:checked ~ #caja14:not(:checked) ~ .Cards label:not(.Label12):not(.Label13),
+#caja11:not(:checked) ~ #caja12:checked ~ #caja13:not(:checked) ~ #caja14:checked ~ .Cards label:not(.Label12):not(.Label14),
+#caja11:not(:checked) ~ #caja12:checked ~ #caja15:checked ~ #caja16:not(:checked) ~ .Cards label:not(.Label12):not(.Label15),
+#caja11:not(:checked) ~ #caja12:checked ~ #caja15:not(:checked) ~ #caja16:checked ~ .Cards label:not(.Label12):not(.Label16),
+
+#caja13:checked ~ #caja14:not(:checked) ~ #caja15:checked ~ #caja16:not(:checked) ~ .Cards label:not(.Label13):not(.Label15),
+#caja13:checked ~ #caja14:not(:checked) ~ #caja15:not(:checked) ~ #caja16:checked ~ .Cards label:not(.Label13):not(.Label16),
+
+#caja13:not(:checked) ~ #caja14:checked ~ #caja15:checked ~ #caja16:not(:checked) ~ .Cards label:not(.Label14):not(.Label15),
+#caja13:not(:checked) ~ #caja14:checked ~ #caja15:not(:checked) ~ #caja16:checked ~ .Cards label:not(.Label14):not(.Label16)
+{
+  pointer-events: none;
+}  
+
+#caja1:checked ~ #caja2:not(:checked) ~ #caja3:checked ~ #caja4:not(:checked) ~ .CartasMal,
+#caja1:checked ~ #caja2:not(:checked) ~ #caja3:not(:checked) ~ #caja4:checked ~ .CartasMal,
+#caja1:checked ~ #caja2:not(:checked) ~ #caja5:checked ~ #caja6:not(:checked) ~ .CartasMal,
+#caja1:checked ~ #caja2:not(:checked) ~ #caja5:not(:checked) ~ #caja6:checked ~ .CartasMal,
+#caja1:checked ~ #caja2:not(:checked) ~ #caja7:checked ~ #caja8:not(:checked) ~ .CartasMal,
+#caja1:checked ~ #caja2:not(:checked) ~ #caja7:not(:checked) ~ #caja8:checked ~ .CartasMal,
+#caja1:checked ~ #caja2:not(:checked) ~ #caja9:checked ~ #caja10:not(:checked) ~ .CartasMal,
+#caja1:checked ~ #caja2:not(:checked) ~ #caja9:not(:checked) ~ #caja10:checked ~  .CartasMal,
+#caja1:checked ~ #caja2:not(:checked) ~ #caja11:checked ~ #caja12:not(:checked) ~  .CartasMal,
+#caja1:checked ~ #caja2:not(:checked) ~ #caja11:not(:checked) ~ #caja12:checked ~  .CartasMal,
+#caja1:checked ~ #caja2:not(:checked) ~ #caja13:checked ~ #caja14:not(:checked) ~  .CartasMal,
+#caja1:checked ~ #caja2:not(:checked) ~ #caja13:not(:checked) ~ #caja14:checked ~  .CartasMal,
+#caja1:checked ~ #caja2:not(:checked) ~ #caja15:checked ~ #caja16:not(:checked) ~  .CartasMal,
+#caja1:checked ~ #caja2:not(:checked) ~ #caja15:not(:checked) ~ #caja16:checked ~  .CartasMal,
+
+#caja1:not(:checked) ~ #caja2:checked  ~ #caja3:checked ~ #caja4:not(:checked) ~ .CartasMal,
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja3:not(:checked) ~ #caja4:checked ~ .CartasMal,
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja5:checked ~ #caja6:not(:checked) ~ .CartasMal,
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja5:not(:checked) ~ #caja6:checked ~ .CartasMal,
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja7:checked ~ #caja8:not(:checked) ~ .CartasMal,
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja7:not(:checked) ~ #caja8:checked ~ .CartasMal,
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja9:checked ~ #caja10:not(:checked) ~ .CartasMal,
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja9:not(:checked) ~ #caja10:checked ~  .CartasMal,
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja11:checked ~ #caja12:not(:checked) ~  .CartasMal,
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja11:not(:checked) ~ #caja12:checked ~  .CartasMal,
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja13:checked ~ #caja14:not(:checked) ~  .CartasMal,
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja13:not(:checked) ~ #caja14:checked ~  .CartasMal,
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja15:checked ~ #caja16:not(:checked) ~  .CartasMal,
+ #caja1:not(:checked) ~ #caja2:checked ~ #caja15:not(:checked) ~ #caja16:checked ~  .CartasMal,
+
+#caja3:checked ~ #caja4:not(:checked) ~ #caja5:checked ~ #caja6:not(:checked) ~ .CartasMal,
+#caja3:checked ~ #caja4:not(:checked) ~ #caja5:not(:checked) ~ #caja6:checked ~ .CartasMal,
+#caja3:checked ~ #caja4:not(:checked) ~ #caja7:checked ~ #caja8:not(:checked) ~ .CartasMal,
+#caja3:checked ~ #caja4:not(:checked) ~ #caja7:not(:checked) ~ #caja8:checked ~ .CartasMal,
+#caja3:checked ~ #caja4:not(:checked) ~ #caja9:checked ~ #caja10:not(:checked) ~ .CartasMal,
+#caja3:checked ~ #caja4:not(:checked) ~ #caja9:not(:checked) ~ #caja10:checked ~  .CartasMal,
+#caja3:checked ~ #caja4:not(:checked) ~ #caja11:checked ~ #caja12:not(:checked) ~  .CartasMal,
+#caja3:checked ~ #caja4:not(:checked) ~ #caja11:not(:checked) ~ #caja12:checked ~  .CartasMal,
+#caja3:checked ~ #caja4:not(:checked) ~ #caja13:checked ~ #caja14:not(:checked) ~  .CartasMal,
+#caja3:checked ~ #caja4:not(:checked) ~ #caja13:not(:checked) ~ #caja14:checked ~  .CartasMal,
+#caja3:checked ~ #caja4:not(:checked) ~ #caja15:checked ~ #caja16:not(:checked) ~  .CartasMal,
+#caja3:checked ~ #caja4:not(:checked) ~ #caja15:not(:checked) ~ #caja16:checked ~  .CartasMal,
+
+#caja3:not(:checked) ~ #caja4:checked ~ #caja5:checked ~ #caja6:not(:checked) ~ .CartasMal,
+#caja3:not(:checked) ~ #caja4:checked ~ #caja5:not(:checked) ~ #caja6:checked ~ .CartasMal,
+#caja3:not(:checked) ~ #caja4:checked ~ #caja7:checked ~ #caja8:not(:checked) ~ .CartasMal,
+#caja3:not(:checked) ~ #caja4:checked ~ #caja7:not(:checked) ~ #caja8:checked ~ .CartasMal,
+#caja3:not(:checked) ~ #caja4:checked ~ #caja9:checked ~ #caja10:not(:checked) ~ .CartasMal,
+#caja3:not(:checked) ~ #caja4:checked ~ #caja9:not(:checked) ~ #caja10:checked ~  .CartasMal,
+#caja3:not(:checked) ~ #caja4:checked ~ #caja11:checked ~ #caja12:not(:checked) ~  .CartasMal,
+#caja3:not(:checked) ~ #caja4:checked ~ #caja11:not(:checked) ~ #caja12:checked ~  .CartasMal,
+#caja3:not(:checked) ~ #caja4:checked ~ #caja13:checked ~ #caja14:not(:checked) ~  .CartasMal,
+#caja3:not(:checked) ~ #caja4:checked ~ #caja13:not(:checked) ~ #caja14:checked ~  .CartasMal,
+#caja3:not(:checked) ~ #caja4:checked ~ #caja15:checked ~ #caja16:not(:checked) ~  .CartasMal,
+#caja3:not(:checked) ~ #caja4:checked ~ #caja15:not(:checked) ~ #caja16:checked ~  .CartasMal,
+
+#caja5:checked ~ #caja6:not(:checked) ~ #caja7:checked ~ #caja8:not(:checked) ~ .CartasMal,
+#caja5:checked ~ #caja6:not(:checked) ~ #caja7:not(:checked) ~ #caja8:checked ~ .CartasMal,
+#caja5:checked ~ #caja6:not(:checked) ~ #caja9:checked ~ #caja10:not(:checked) ~ .CartasMal,
+#caja5:checked ~ #caja6:not(:checked) ~ #caja9:not(:checked) ~ #caja10:checked ~  .CartasMal,
+#caja5:checked ~ #caja6:not(:checked) ~ #caja11:checked ~ #caja12:not(:checked) ~  .CartasMal,
+#caja5:checked ~ #caja6:not(:checked) ~ #caja11:not(:checked) ~ #caja12:checked ~  .CartasMal,
+#caja5:checked ~ #caja6:not(:checked) ~ #caja13:checked ~ #caja14:not(:checked) ~  .CartasMal,
+#caja5:checked ~ #caja6:not(:checked) ~ #caja13:not(:checked) ~ #caja14:checked ~  .CartasMal,
+#caja5:checked ~ #caja6:not(:checked) ~ #caja15:checked ~ #caja16:not(:checked) ~  .CartasMal,
+#caja5:checked ~ #caja6:not(:checked) ~ #caja15:not(:checked) ~ #caja16:checked ~  .CartasMal,
+
+#caja5:not(:checked) ~ #caja6:checked ~ #caja7:checked ~ #caja8:not(:checked) ~ .CartasMal,
+#caja5:not(:checked) ~ #caja6:checked ~ #caja7:not(:checked) ~ #caja8:checked ~ .CartasMal,
+#caja5:not(:checked) ~ #caja6:checked ~ #caja9:checked ~ #caja10:not(:checked) ~ .CartasMal,
+#caja5:not(:checked) ~ #caja6:checked ~ #caja9:not(:checked) ~ #caja10:checked ~  .CartasMal,
+#caja5:not(:checked) ~ #caja6:checked ~ #caja11:checked ~ #caja12:not(:checked) ~  .CartasMal,
+#caja5:not(:checked) ~ #caja6:checked ~ #caja11:not(:checked) ~ #caja12:checked ~  .CartasMal,
+#caja5:not(:checked) ~ #caja6:checked ~ #caja13:checked ~ #caja14:not(:checked) ~  .CartasMal,
+#caja5:not(:checked) ~ #caja6:checked ~ #caja13:not(:checked) ~ #caja14:checked ~  .CartasMal,
+#caja5:not(:checked) ~ #caja6:checked ~ #caja15:checked ~ #caja16:not(:checked) ~  .CartasMal,
+#caja5:not(:checked) ~ #caja6:checked ~ #caja15:not(:checked) ~ #caja16:checked ~  .CartasMal,
+
+#caja7:checked ~ #caja8:not(:checked) ~ #caja9:checked ~ #caja10:not(:checked) ~ .CartasMal,
+#caja7:checked ~ #caja8:not(:checked) ~ #caja9:not(:checked) ~ #caja10:checked ~  .CartasMal,
+#caja7:checked ~ #caja8:not(:checked) ~ #caja11:checked ~ #caja12:not(:checked) ~  .CartasMal,
+#caja7:checked ~ #caja8:not(:checked) ~ #caja11:not(:checked) ~ #caja12:checked ~  .CartasMal,
+#caja7:checked ~ #caja8:not(:checked) ~ #caja13:checked ~ #caja14:not(:checked) ~  .CartasMal,
+#caja7:checked ~ #caja8:not(:checked) ~ #caja13:not(:checked) ~ #caja14:checked ~  .CartasMal,
+#caja7:checked ~ #caja8:not(:checked) ~ #caja15:checked ~ #caja16:not(:checked) ~  .CartasMal,
+#caja7:checked ~ #caja8:not(:checked) ~ #caja15:not(:checked) ~ #caja16:checked ~  .CartasMal,
+
+#caja7:not(:checked) ~ #caja8:checked ~ #caja9:checked ~ #caja10:not(:checked) ~ .CartasMal,
+#caja7:not(:checked) ~ #caja8:checked ~ #caja9:not(:checked) ~ #caja10:checked ~  .CartasMal,
+#caja7:not(:checked) ~ #caja8:checked ~ #caja11:checked ~ #caja12:not(:checked) ~  .CartasMal,
+#caja7:not(:checked) ~ #caja8:checked ~ #caja11:not(:checked) ~ #caja12:checked ~  .CartasMal,
+#caja7:not(:checked) ~ #caja8:checked ~ #caja13:checked ~ #caja14:not(:checked) ~  .CartasMal,
+#caja7:not(:checked) ~ #caja8:checked ~ #caja13:not(:checked) ~ #caja14:checked ~  .CartasMal,
+#caja7:not(:checked) ~ #caja8:checked ~ #caja15:checked ~ #caja16:not(:checked) ~  .CartasMal,
+#caja7:not(:checked) ~ #caja8:checked ~ #caja15:not(:checked) ~ #caja16:checked ~  .CartasMal,
+
+#caja9:checked ~ #caja10:not(:checked) ~ #caja11:checked ~ #caja12:not(:checked) ~  .CartasMal,
+#caja9:checked ~ #caja10:not(:checked) ~ #caja11:not(:checked) ~ #caja12:checked ~  .CartasMal,
+#caja9:checked ~ #caja10:not(:checked) ~ #caja13:checked ~ #caja14:not(:checked) ~  .CartasMal,
+#caja9:checked ~ #caja10:not(:checked) ~ #caja13:not(:checked) ~ #caja14:checked ~  .CartasMal,
+#caja9:checked ~ #caja10:not(:checked) ~ #caja15:checked ~ #caja16:not(:checked) ~  .CartasMal,
+#caja9:checked ~ #caja10:not(:checked) ~ #caja15:not(:checked) ~ #caja16:checked ~  .CartasMal,
+
+#caja9:not(:checked) ~ #caja10:checked ~ #caja11:checked ~ #caja12:not(:checked) ~  .CartasMal,
+#caja9:not(:checked) ~ #caja10:checked ~ #caja11:not(:checked) ~ #caja12:checked ~  .CartasMal,
+#caja9:not(:checked) ~ #caja10:checked ~ #caja13:checked ~ #caja14:not(:checked) ~  .CartasMal,
+#caja9:not(:checked) ~ #caja10:checked ~ #caja13:not(:checked) ~ #caja14:checked ~ .CartasMal,
+#caja9:not(:checked) ~ #caja10:checked ~ #caja15:checked ~ #caja16:not(:checked) ~  .CartasMal,
+#caja9:not(:checked) ~ #caja10:checked ~ #caja15:not(:checked) ~ #caja16:checked ~  .CartasMal,
+
+#caja11:checked ~ #caja12:not(:checked) ~ #caja13:checked ~ #caja14:not(:checked) ~  .CartasMal,
+#caja11:checked ~ #caja12:not(:checked) ~ #caja13:not(:checked) ~ #caja14:checked ~  .CartasMal,
+#caja11:checked ~ #caja12:not(:checked) ~ #caja15:checked ~ #caja16:not(:checked) ~  .CartasMal,
+#caja11:checked ~ #caja12:not(:checked) ~ #caja15:not(:checked) ~ #caja16:checked ~  .CartasMal,
+
+#caja11:not(:checked) ~ #caja12:checked ~ #caja13:checked ~ #caja14:not(:checked) ~  .CartasMal,
+#caja11:not(:checked) ~ #caja12:checked ~ #caja13:not(:checked) ~ #caja14:checked ~  .CartasMal,
+#caja11:not(:checked) ~ #caja12:checked ~ #caja15:checked ~ #caja16:not(:checked) ~  .CartasMal,
+#caja11:not(:checked) ~ #caja12:checked ~ #caja15:not(:checked) ~ #caja16:checked ~  .CartasMal,
+
+#caja13:checked ~ #caja14:not(:checked) ~ #caja15:checked ~ #caja16:not(:checked) ~  .CartasMal,
+#caja13:checked ~ #caja14:not(:checked) ~ #caja15:not(:checked) ~ #caja16:checked ~  .CartasMal,
+
+#caja13:not(:checked) ~ #caja14:checked ~ #caja15:checked ~ #caja16:not(:checked) ~  .CartasMal,
+#caja13:not(:checked) ~ #caja14:checked ~ #caja15:not(:checked) ~ #caja16:checked ~  .CartasMal
+{
+  display: flex;
+  pointer-events: none;
+}  
+
+#caja1:checked + #caja2:checked + #caja3:checked + #caja4:checked + #caja5:checked + #caja6:checked + #caja7:checked
+ + #caja8:checked + #caja9:checked + #caja10:checked + #caja11:checked + #caja12:checked + #caja13:checked + 
+ #caja14:checked + #caja15:checked + #caja16:checked ~ .Cards  .Ganaste{
+display: flex;
+}
+
+
+
+
+#caja1:checked + #caja2:checked + #caja3:checked + #caja4:checked + #caja5:checked + #caja6:checked + #caja7:checked
+ + #caja8:checked + #caja9:checked + #caja10:checked + #caja11:checked + #caja12:checked + #caja13:checked + 
+ #caja14:checked + #caja15:checked + #caja16:checked ~ .Cards .FlipCard{
+ transform: rotateX(360deg );
+ animation: rotacion 1s infinite;
+}
+
+
+
+
+
+
+
+.Ganaste{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 200px;
+  background-color: #ffffff;
+  border-radius: 10px;
+    z-index: 100;
+}
+.CartasMal{  
+  display: none;
+  position: relative;
+  top: 5%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 200px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2),
+    0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 90;
+}
+
+
+
+
+.Ganaste h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.Ganaste button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2),
+    0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.volverajugar{
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2),
+    0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.Ganaste a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .FlipCard{
+    width: 140px;
+    height: 140px;
+  }
+  .Ganaste h1 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .Ganaste{
+ 
+    width: 40vw;
+    height: 200px;
+
+  }
+}
+
+@media screen and (max-width: 600px ) {
+  .FlipCard{
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .Ganaste h1 {
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .Ganaste{
+ 
+    width: 40vw !important;
+    height: 200px !important;
+
+  }
+
+  .CartasMal{
+
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 400px ) {
+  .FlipCard{
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .Ganaste h1 {
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .Ganaste{
+ 
+    width: 40vw !important;
+    height: 200px !important;
+
+  }
+}
+
+
+
+@media screen and (max-height: 600px ) {
+  .FlipCard{
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .Ganaste h1 {
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .Ganaste{
+ 
+    width: 40vw !important;
+    height: 200px !important;
+
+  }
+}

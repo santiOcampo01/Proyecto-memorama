@@ -1,0 +1,44 @@
+h1{
+   text-align: center;
+}
+
+body{
+   text-align: center;
+   font-size: 20px;
+   background-image: url(Fondos-de-colores-lisos.jpg);
+ background-size:cover;
+
+}
+
+button{
+  border-radius: 50px;
+   width: 300px;
+   height: 100px;
+   background-color:rgb(131, 98, 221);
+   font-size: 20px;
+   font-family: cursive;
+ }
+ 
+ button{
+     animation-duration: 3s;
+      animation-name:slidein;
+      text-decoration-color: beige ;
+    }
+    
+    @keyframes slidein {
+      from {
+        margin-right: 300%;
+        width: -500%
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+    }
+ 
+    #Imagen{
+   border: 100px white solid;
+   border-width: 20px;
+   border-style: double;
+   }
